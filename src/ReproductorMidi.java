@@ -51,7 +51,7 @@ public class ReproductorMidi {
             long tiempo = 0;
             double ticksPorRedonda = RESOLUCION * 4;
 
-            for (int i = 0; i < lista.getTamanho(); i++) {
+            for (int i = 0; i < lista.getTamaño(); i++) {
                 Nota nota = lista.obtener(i);
                 int valorMidi = convertirAMidi(nota.getNombreNota(), nota.getOctava());
                 double duracionFigura = nota.getFigura().getDuracion();
@@ -81,7 +81,7 @@ public class ReproductorMidi {
     }
 
     public void detener() {
-        if (secuenciador != null && secuenciador.isRunning()) {
+        if (secuenciador != null) {
             secuenciador.stop();
         }
     }

@@ -15,7 +15,7 @@ public class GestorJSON {
     private static final String RUTA_DEFAULT = "melodia.json";
     private final Gson gson;
 
-    @SuppressWarnings("unused")
+
     public GestorJSON() {
         this.gson = new GsonBuilder().setPrettyPrinting().create();
     }
@@ -28,7 +28,7 @@ public class GestorJSON {
         try {
             List<NotaDTO> notasDTO = new ArrayList<>();
 
-            for (int i = 0; i < lista.getTamanho(); i++) {
+            for (int i = 0; i < lista.getTamaño(); i++) {
                 Nota nota = lista.obtener(i);
                 if (nota != null) {
                     NotaDTO dto = new NotaDTO(
